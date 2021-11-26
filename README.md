@@ -15,6 +15,19 @@ configure it as you wish! Export options for CSV and Excel are available. _Howev
 install either the `phpoffice/phpspreadsheet` or `phpoffice/phpexcel` package for Excel support, 
 otherwise the Excel export option will not be available. 
 
+Editable Values
+-------------
+
+This fork enables the 'Edit' function for the fields of each lead.
+To edit the values, just click the button next to the field in list view of the lead.
+For now, the following input fields are tested and supported:
+
+- Text
+- Hidden
+- Checkbox
+- Select (incl. multiple)
+- Radio
+
 Simple Tokens
 -------------
 
