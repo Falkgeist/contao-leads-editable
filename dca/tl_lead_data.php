@@ -162,8 +162,6 @@ class tl_lead_data extends Backend
     public function generateInputField(DataContainer $dc, string $extendedLabel)
     {
         $objFormField = FormFieldModel::findById($dc->activeRecord->field_id);
-        //dump($objFormField->row());
-        //dump($dc->activeRecord->row());
         $arrAttributes = [
             'id'=> $objFormField->id,
             'name' => $objFormField->name,
@@ -180,7 +178,6 @@ class tl_lead_data extends Backend
         }
         else if ($objFormField->type == 'checkbox') {
             $arrAttributes['options'] = $objFormField->options;
-            dump($objFormField->multiple);
             if (count(unserialize($objFormField->options)) > 1) {
                 $arrAttributes['multiple'] = $objFormField->options;
             }
